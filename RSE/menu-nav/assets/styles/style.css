@@ -13,6 +13,7 @@ html {
 body {
     display: grid;
     grid-template-rows: minmax(8vh, max-content) minmax(92vh, max-content) minmax(10vh, max-content);
+    background-color: var(--background-color);
 
     & > header {
         background-color: var(--header-bg-color);

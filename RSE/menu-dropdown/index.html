@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="roboto-regular">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mon Site Accessible</title>
+        <link rel="stylesheet" href="assets/styles/style.css" />
+    </head>
+    <body>
+        <header>
+            <a class="sr-only" href="#main-title">Accéder directement au contenu</a>
+            <button id="mobile-header-button">
+                <span class="bi-list"></span>
+                <span class="sr-only">Ouvrir le menu</span>
+            </button>
+            <nav id="main-nav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="#">À propos</a>
+                    </li>
+                    <li>
+                        <button id="projects-dropdown-btn">
+                            Projets
+                            <span class="bi bi-caret-down-square"></span>
+                        </button>
+                        <ul id="projects-dropdown" class="dropdown-closed">
+                            <li>
+                                <a href="#">Projets Back-End</a>
+                            </li>
+                            <li>
+                                <a href="#">Projets Front-End</a>
+                            </li>
+                            <li>
+                                <a href="#">Projets Design</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+
+        </main>
+        <footer>
+
+        </footer>
+        <script type="application/javascript" src="assets/javascript/main.js"></script>
+    </body>
+</html>
