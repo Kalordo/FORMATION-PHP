@@ -13,7 +13,7 @@
 
 #### Comment tester ?
 
-Chaque image (balise `<img>` ou balise possédant l’attribut WAI-ARIA `role="img"`) porteuse d’information a-t-elle une alternative textuelle ? non
+Chaque image (balise `<img>` ou balise possédant l’attribut WAI-ARIA `role="img"`) porteuse d’information a-t-elle une alternative textuelle ?
 
 
 ### 2 Pour chaque image porteuse d’information ayant une alternative textuelle, cette alternative est-elle pertinente ?
@@ -28,7 +28,7 @@ Chaque image (balise `<img>` ou balise possédant l’attribut WAI-ARIA `role="i
 - S’il est présent, le contenu de l’attribut WAI-ARIA `aria-label` est pertinent ;
 - S’il est présent, le passage de texte associé via l’attribut WAI-ARIA `aria-labelledby` est pertinent.
 
-Une alternative textuelle pertinente décrit précisément l'image. Par exemple "Affiche du film : Une jeune femme blonde observe des enfants jouer par la fenêtre en souriant" décrit une situation et son contexte alors que "Affiche du film" qui décrirait la même scène n'apporte aucune information.
+Une alternative textuelle pertinente décrit précisémment l'image. Par exemple "Affiche du film : Une jeune femme blonde observe des enfants jouer par la fenêtre en souriant" décrit une situation et son contexte alors que "Affiche du film" qui décrirait la même scène n'apporte aucune information.
 
 
 ## Couleur

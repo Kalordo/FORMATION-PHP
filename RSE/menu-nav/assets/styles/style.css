@@ -1,0 +1,42 @@
+/* LIBRARIES */
+@import "libs/_reset.css";
+@import "libs/_utils.css";
+
+/* VARIABLES */
+@import "vars/_fonts.css";
+@import "vars/_colors.css";
+
+html {
+    font-size: 18px;
+}
+
+body {
+    display: grid;
+    grid-template-rows: minmax(8vh, max-content) minmax(92vh, max-content) minmax(10vh, max-content);
+
+    & > header {
+        background-color: var(--header-bg-color);
+        color: var(--header-color);
+
+        nav {
+            display: grid;
+            height: 100%;
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                align-self: center;
+
+                li {
+                    display: grid;
+                    text-align: center;
+
+                    a {
+                        color: var(--header-color);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
