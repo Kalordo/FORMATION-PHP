@@ -1,0 +1,131 @@
+La liste de tous les utilisateurs ;
+
+SELECT * 
+FROM users;
+
+La liste de tous les utilisateurs rangée par noms de famille ;
+
+SELECT * 
+FROM users ORDER BY last_name;
+
+Le dernier utilisateur inscrit ;
+
+SELECT * 
+FROM `users` ORDER BY registration_date 
+DESC LIMIT 1;
+
+La liste de tous les utilisateurs fêtant leur anniversaire ce mois-ci ;
+
+SELECT * 
+FROM users 
+WHERE MONTH(birthdate) = MONTH(CURDATE()) 
+
+Le nombre total d'utilisateurs ;
+
+SELECT COUNT(*) 
+FROM `users`;
+
+La liste de tous les utilisateurs associés à leurs villes respectives ;
+
+SELECT users.first_name, users.last_name, addresses.city 
+FROM users JOIN addresses 
+ON users.id = addresses.user_id;
+
+La liste de tous les utilisateurs vivant à une adresse sans numéro ;
+
+SELECT users.first_name, users.last_name, addresses.number 
+FROM users JOIN addresses 
+ON users.id = addresses.user_id 
+WHERE addresses.number IS NULL
+
+La liste de tous les produits dont le prix est supérieur à 1 000 € ;
+
+SELECT products.name, products.price 
+FROM products 
+WHERE products.price > 1000;
+
+La liste de tous les produits associés à leurs photos respectives ;
+
+SELECT products.name, pictures.product_id, pictures.url 
+FROM products JOIN pictures 
+ON products.id = pictures.product_id;
+
+La liste de tous les produits appartenant à la catégorie « Voyage » ;
+
+SELECT products.name, products.id, products_categories.product_id, products_categories.category_id, categories.title
+FROM products 
+JOIN products_categories ON products.id = products_categories.product_id
+JOIN categories ON products_categories.category_id = categories.id
+WHERE categories.title = 'Voyage';
+
+La liste de tous les utilisateurs ayant effectué plus de dix commandes ;
+
+SELECT users.id, users.first_name, users.last_name, 
+COUNT(orders.id) 
+FROM users JOIN orders ON users.id = orders.user_id 
+GROUP BY users.id 
+HAVING COUNT(orders.id) > 10;
+
+La liste de tous les produits achetés par le premier utilisateur inscrit.
+
+SELECT products.id, products.name
+FROM users
+JOIN orders ON users.id = orders.user_id
+JOIN products_orders ON orders.id = products_orders.order_id
+JOIN products ON products.id = products_orders.product_id
+WHERE users.id = (
+    SELECT id
+    FROM users
+    ORDER BY registration_date ASC
+    LIMIT 1
+);
+
+------------------------BONUS--------------------------
+
+Requête 1﻿
+
+SELECT products.name, products.description, products.price
+FROM products;
+
+Requête 2
+
+SELECT products.name, products.description, products.price
+FROM products
+WHERE products.price < 42
+ORDER BY products.price DESC;
+
+Requête 3
+
+SELECT addresses.city, addresses.postal_code, addresses.number, addresses.street
+FROM addresses;
+
+Requête 4
+
+SELECT addresses.city, addresses.postal_code, addresses.number, addresses.street
+FROM addresses
+WHERE addresses.city LIKE "A%";
+
+Requête 5 
+
+SELECT *
+FROM users;
+
+Requête 6 
+
+SELECT *
+FROM users
+ORDER BY users.birthdate;
+
+Requête 7
+
+SELECT *
+FROM users
+WHERE TIMESTAMPDIFF(YEAR, birthdate, CURDATE()) > 50
+ORDER BY users.birthdate DESC;
+
+Requête 8
+
+SELECT *, TIMESTAMPDIFF(YEAR, birthdate, CURDATE()) AS Age
+FROM users
+WHERE TIMESTAMPDIFF(YEAR, birthdate, CURDATE()) > 50
+ORDER BY users.birthdate;
