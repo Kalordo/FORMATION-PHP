@@ -8,8 +8,8 @@ $parameters = [
 ];
 $query->execute($parameters);
 
-$address = $query->fetch(PDO::FETCH_ASSOC);
+$usersAddress = $query->fetch(PDO::FETCH_ASSOC);
 
-var_dump($address);
+var_dump($usersAddress);
 
 ?>
