@@ -2,13 +2,13 @@
 
 function postPage() : void
 {
-    // remplacez ce code pour récupérer l'id du post passé en paramètres
-    $postId = null;
+    // print_r($_GET);
+    $postId = $_GET["post"];
 
     require "managers/post_manager.php";
 
-    // remplacez ce code pour appeler la fonction qui permet de récupérer les infos d'un post
-    $post = null;
+    $post = getPost($postId);
+    //var_dump($post);
 
     $template = "templates/post.phtml";
     require "templates/layout.phtml";
