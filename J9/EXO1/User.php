@@ -1,11 +1,7 @@
 <?php
 
 class User {
-    private int $id;
-    private string $username;
-    private string $password;
-
-    public function __construct() {
+    public function __construct(private int $id, private string $username, private string $password) {
 
     }
 
@@ -13,10 +9,10 @@ class User {
         $this->id = $id;
     }
     public function getId() : int {
-        $this->id = $id;
+        return $this->id;
     }
 
-    public function setUserame(string $username) :void {
+    public function setUsername(string $username) :void {
         $this->username = $username;
     }
     public function getUsername() : string {
