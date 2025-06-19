@@ -2,7 +2,6 @@
 
 class User {
     public function __construct(private int $id, private string $username, private string $password) {
-
     }
 
     public function setId(int $id) {
