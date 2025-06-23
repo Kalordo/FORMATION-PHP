@@ -37,7 +37,7 @@ class ComicBook extends Book {
 
   public function getArtist() : string
   {
-    return $this->artist();
+    return $this->artist;
   }
 
   public function setArtist(string $artist) : void

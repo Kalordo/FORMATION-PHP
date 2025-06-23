@@ -44,7 +44,15 @@ class Reader extends User
 
 $reader = new Reader ("exercice@example.com", "mdp123456789");
 
-$reader->addBookToFavorites("La bande à Picsou");
-$reader->addBookToFavorites("Gaston Lagaffe");
+$favorites = $reader->addBookToFavorites("La bande à Picsou");
+$favorites = $reader->addBookToFavorites("Gaston Lagaffe");
 
 print_r($favorites);
+
+$favorites = $reader->removeBookFromFavorites("La bande à Picsou");
+
+print_r($favorites);
+
+$loginInfos = $reader->login();
+
+print_r($loginInfos);
