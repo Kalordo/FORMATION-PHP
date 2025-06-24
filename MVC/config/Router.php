@@ -8,7 +8,7 @@ class Router {
         if (isset($get["route"]) && ($get["route"]) === "a-propos" ) {
             $controller = new PageController();
             $controller->about();
-        } else if (isset($get["route"]) && ($get["route"]) === "home" ) {
+        } else if (!isset($get["route"])) {
             $controller = new PageController();
             $controller->home();
         } else if (isset($get["route"]) && ($get["route"]) === "contact" ) {
