@@ -1,4 +1,4 @@
 <?php
 
-require "../controllers/PageController.php";
-require "./Router.php";
+require __DIR__ . '/../controllers/PageController.php';
+require __DIR__ . '/../Router.php';
