@@ -14,7 +14,7 @@ class PageController {
     }
     public function contact() : void {
         $route = "contact";
-        require "template/contact.phtml";
+        require "templates/layout.phtml";
     }
     public function notFound() : void {  
         $route = "notFound";
