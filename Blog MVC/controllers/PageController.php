@@ -1,23 +1,29 @@
 <?php
 
 class PageController {
-    public function __construct() {
+    public function home($route): void {
+        require __DIR__ . '/../templates/home.phtml';
     }
 
-    public function home() : void {
-        $route = "home";
-        require "templates/layout.phtml";
+    public function about($route): void {
+        require __DIR__ . '/../templates/about.phtml';
     }
-    public function about() : void {
-        $route = "about";
-        require "templates/layout.phtml";
+
+    public function contact($route): void {
+        require __DIR__ . '/../templates/contact.phtml';
     }
-    public function contact() : void {
-        $route = "contact";
-        require "templates/layout.phtml";
+
+    public function categorie($route, $categorie): void {
+        $categorie = htmlspecialchars($categorie);
+        require __DIR__ . '/../templates/categorie.phtml';
     }
-    public function notFound() : void {  
-        $route = "notFound";
-        require "templates/layout.phtml";
+
+    public function article($route, $article): void {
+        $article = htmlspecialchars($article);
+        require __DIR__ . '/../templates/article.phtml';
+    }
+
+    public function notFound($route): void {
+        require __DIR__ . '/../templates/notFound.phtml';
     }
 }

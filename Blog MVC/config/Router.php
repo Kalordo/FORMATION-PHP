@@ -1,22 +1,31 @@
 <?php
 
 class Router {
-    public function __construct() {
-    }
+    public function handleRequest(array $get): void {
+        $controller = new PageController();
 
-    public function handleRequest(array $get) : void {
-        if (isset($get["route"]) && ($get["route"]) === "a-propos" ) {
-            $controller = new PageController();
-            $controller->about();
-        } else if (!isset($get["route"])) {
-            $controller = new PageController();
-            $controller->home();
-        } else if (isset($get["route"]) && ($get["route"]) === "contact" ) {
-            $controller = new PageController();
-            $controller->contact();
+        if (!isset($get['route'])) {
+            $route = "home";
+            $controller->home($route);
+        } else if ($get['route'] === "a-propos") {
+            $route = "a-propos";
+            $controller->about($route);
+        } else if ($get['route'] === "contact") {
+            $route = "contact";
+            $controller->contact($route);
+        } else if ($get['route'] === "categorie" && isset($get['categorie'])) {
+            $route = "categorie";
+            $categorie = $get['categorie'];
+            $controller->categorie($route, $categorie);
+        } else if ($get['route'] === "article" && isset($get['article'])) {
+            $route = "article";
+            $article = $get['article'];
+            $controller->article($route, $article);
         } else {
-            $controller = new PageController();
-            $controller->notFound();
+            $route = "notFound";
+            $controller->notFound($route);
         }
+
+        require __DIR__ . '/../templates/layout.phtml';
     }
 }
