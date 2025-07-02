@@ -12,23 +12,23 @@ main {
       grid-template-columns: repeat(10, 50px);
 
       &:nth-of-type(1), &:nth-of-type(2) {
-        background-color: $color1;
+        background-color: $color6;
       }
 
       &:nth-of-type(3), &:nth-of-type(4) {
-        background-color: $color2;
+        background-color: $color7;
       }
 
       &:nth-of-type(5), &:nth-of-type(6) {
-        background-color: $color3;
+        background-color: $color8;
       }
 
       &:nth-of-type(7), &:nth-of-type(8) {
-        background-color: $color4;
+        background-color: $color9;
       }
 
       &:nth-of-type(9), &:nth-of-type(10) {
-        background-color: $color5;
+        background-color: $color10;
       }
 
       & > section {

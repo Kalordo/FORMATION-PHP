@@ -1,0 +1,38 @@
+body > header {
+  background-color: #213458;
+  color: white;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+body > header h1 {
+  font-size: 2.5rem;
+}
+
+main {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+main article {
+  max-width: 50vw;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 10vh 90vh;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/*# sourceMappingURL=style.css.map */
