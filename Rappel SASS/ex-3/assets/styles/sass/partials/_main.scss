@@ -3,6 +3,19 @@ main {
   align-items: center;
   justify-content: center;
 
+  .intro {
+    @include roboto(200, italic);
+  }
+
+  h2 {
+    @include roboto(900, normal);
+    text-transform: uppercase
+  }
+
+  h3 {
+    @include roboto(700, italic);
+  }
+
   article {
     max-width:50vw;
   }
