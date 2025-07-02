@@ -7,9 +7,17 @@ main {
     display: grid;
     grid-template-rows: repeat(10, 50px);
 
+    /*&> section:nth-child(odd) {
+      background-color: black;
+    }*/
+
     & > section {
       display: grid;
       grid-template-columns: repeat(10, 50px);
+
+      &> section:nth-child(even) {
+      background-color: black;
+      }
 
       & > section {
         border: 1px dotted black;

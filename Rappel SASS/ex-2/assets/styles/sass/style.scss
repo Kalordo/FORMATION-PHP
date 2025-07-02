@@ -1,0 +1,24 @@
+@import "_vars";
+
+@import "partials/_header";
+@import "partials/_main";
+
+html {
+  font-size:16px;
+}
+
+body {
+  margin:0;
+  padding: 0;
+  display: grid;
+  min-height: 100vh;
+
+  grid-template-rows: 10vh 90vh;
+
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+          "wdth" 100;
+}
