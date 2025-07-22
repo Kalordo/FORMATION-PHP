@@ -7,7 +7,7 @@ const stripe = Stripe('pk_test_51Rnb4XPLMFAq0msLQEkd1VRCLHJLLLKeMUEhGsaI19c0uIw7
 
 let amount = 0;
 
-document.querySelector("#montant-personnalise").addEventListener("input", (event) => {
+document.querySelector("#montant-personnalise").addEventListener("change", (event) => {
   amount = parseFloat(event.target.value);
 
   if (!isNaN(amount) && amount >= 1) {
