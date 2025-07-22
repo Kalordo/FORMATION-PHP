@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '../../config');
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../config');
 $dotenv->load();
 
 $stripeSecretKey = $_ENV['STRIPE_SECRET_KEY'];
