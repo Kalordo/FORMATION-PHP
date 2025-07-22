@@ -5,8 +5,15 @@
 
 const stripe = Stripe('pk_test_51Rnb4XPLMFAq0msLQEkd1VRCLHJLLLKeMUEhGsaI19c0uIw7U3Db9YjPZoNPc4drSsG0C6SvBonONAoLno8fNx7F004qyz1K16');
 
-let amount;
-initialize();
+let amount = 0;
+
+document.querySelector("#montant-personnalise").addEventListener("input", (event) => {
+  amount = parseFloat(event.target.value);
+
+  if (!isNaN(amount) && amount >= 1) {
+    initialize();
+  }
+});
 
 let elements;
 
