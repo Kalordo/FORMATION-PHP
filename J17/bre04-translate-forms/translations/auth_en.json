@@ -13,5 +13,6 @@
   "register_password_label" : "Password",
   "register_confirm-password_label" : "Confirm Password",
   "register_login_text" : "Already have an account ?",
-  "register_link_text" : "Login here"
+  "register_link_text" : "Login here",
+  "register_submit_button" : "Register"
 }
