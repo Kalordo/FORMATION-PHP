@@ -1,5 +1,6 @@
 <?php
 
+
 class Router
 {
     public function handleRequest()
@@ -8,15 +9,15 @@ class Router
 
         if ($route === 'posts') {
             $controller = new PostController();
-            $controller->index();
+            $controller->showAllPosts();
 
         } elseif ($route === 'categories') {
             $controller = new CategoryController();
-            $controller->index();
+            $controller->showAllCategories();
 
         } else {
             $controller = new CategoryController();
-            $controller->index();
+            $controller->showAllCategories();
         }
     }
 }

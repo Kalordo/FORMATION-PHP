@@ -2,10 +2,6 @@
 
 class CategoryController
 {
-    public function index()
-    {
-        $this->showAllCategories();
-    }
     public function showAllCategories()
     {
         $categoryManager = new CategoryManager();

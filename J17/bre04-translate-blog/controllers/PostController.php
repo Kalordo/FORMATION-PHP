@@ -2,10 +2,6 @@
 
 class PostController
 {
-    public function index()
-    {
-        $this->showAllPosts();
-    }
     public function showAllPosts()
     {
         $postManager = new PostManager();

@@ -13,7 +13,9 @@ class PostManager extends AbstractManager
 
         $resultats = [];
 
-        while ($ligne = $requete->fetch()) {
+        $lignes = $requete->fetchAll();
+
+        foreach ($lignes as $ligne) {
             $categorie = new Category();
             $categorie->setId($ligne['category_id']);
             $categorie->setTitleEn($ligne['category_title_en']);
@@ -35,4 +37,3 @@ class PostManager extends AbstractManager
         return $resultats;
     }
 }
-
