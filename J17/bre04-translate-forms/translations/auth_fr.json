@@ -11,5 +11,5 @@
   "register_username_label" : "Nom d'utilisateur",
   "register_email_label" : "Adresse e-mail",
   "register_password_label" : "Mot de passe",
-  "register_confirm_password_label" : "Confirmer le mot de passe"
+  "register_confirm-password_label" : "Confirmer le mot de passe"
 }
