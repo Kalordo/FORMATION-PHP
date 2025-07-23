@@ -1,7 +1,5 @@
 <?php
 
-use PDO;
-
 abstract class AbstractManager
 {
     protected PDO $pdo;
